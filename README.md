@@ -9,10 +9,8 @@ This is the Sleep Tracker application.
 - Navigate to server application `cd /server` in terminal
 - Install dependencies by running `npm i` in terminal
 - Start the DB (Postgresql) container with `docker compose up`
-- Create .env file and put the following definition for DB url
-  ```js
-  DATABASE_URL = "postgresql://root:root@localhost:5432/sleeper";
-  ```
+- Create .env file and copy `.env.example` to `.env`
+ 
 - **TODO**: What else is needed?
 - Finally start the server with `npm run dev`
 
@@ -20,7 +18,7 @@ This is the Sleep Tracker application.
 
 - Navigate to client application folder `cd /client`
 - Install dependencies by running `npm i`
-- Copy `.env.example` to `.env`
+- Create .env file and copy `.env.example` to `.env`
 - Run `npm run dev` in terminal
 
 # Sleep Tracker App - Potential Improvements and Additional Features
