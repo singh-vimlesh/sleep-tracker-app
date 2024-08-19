@@ -1,0 +1,39 @@
+# Node.js dependencies
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local environment variables
+.env
+.env.local
+.env.*.local
+
+# Database files
+*.sqlite
+
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# Build directory
+build/
+dist/
+
+# Local IDE/editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# macOS files
+.DS_Store
+
+# Linux files
+*~
+
