@@ -18,8 +18,14 @@ This is the Sleep Tracker application.
 - Install dependencies by running `npm i` in terminal
 - Start the DB (Postgresql) container with `docker compose up`
 - Create .env file and copy `.env.example` to `.env`
+- Adjust any environment variables as needed.
  
-- **TODO**: What else is needed?
+- Create necessary tables in your PostgreSQL database by running `npx prisma migrate dev`
+(If the database is not yet initialized, this command will create the database schema based on your Prisma schema.)
+
+### Seed the Database
+- To seed data run `npm run prisma:seed`
+  
 - Finally start the server with `npm run dev`
 
 ### Client
