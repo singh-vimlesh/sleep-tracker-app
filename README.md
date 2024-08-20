@@ -2,6 +2,14 @@
 
 This is the Sleep Tracker application.
 
+# Home page
+
+![App Home page](./sleep-tracker-home.png)
+
+# Overview page
+
+![App data overview page](./sleep-tracker-chart.png)
+
 ## Run Locally
 
 ### Server
@@ -22,6 +30,61 @@ This is the Sleep Tracker application.
 - Run `npm run dev` in terminal
 
 # Sleep Tracker App - Potential Improvements and Additional Features
+
+## Major Changes Required
+
+### 1. Authentication & Authorization
+
+- **Authentication:**
+  Ensure users are authenticated before they can add, edit, or view data. This can be implemented using various methods such as JWT tokens, OAuth, or session-based authentication.
+
+- **Authorization:**
+  Currently, all users have the same level of access, which allows them to add, edit, and view sleep records. As the app scales, consider implementing different user roles (such as admins, read-only users, etc.) to manage access control more effectively.
+
+### 2. Database Schema Adjustments
+
+- **Track Modifications:**
+  Add fields to the `SleepRecord` model to track who created or last modified a record (e.g., `createdBy`, `updatedBy`).
+
+- **Public vs. Private Records:**
+  Introduce a `public` boolean flag in the `SleepRecord` model to differentiate between public and private records, if needed.
+
+### 3. API Security Enhancements
+
+- **Allow Editing/Adding:**
+  Update the API to allow authenticated users to edit or add records with appropriate validation and limits.
+
+- **Allow Viewing:**
+  Update the API to allow only authorized users to view records. Implement pagination, rate limiting, and other techniques to manage load effectively.
+
+### 4. Frontend Updates
+
+- **Edit/Add UI:**
+  Update the UI to enable users to add or edit records. Implement form validation and user feedback.
+
+- **View All Records:**
+  Create a public view that lists all sleep records, potentially sorted by date or user.
+
+### 5. Privacy Considerations
+
+- **Data Privacy:**
+  Consider adding a user opt-in for sharing data publicly. Users should be informed about how their data will be used and displayed.
+
+- **Anonymization:**
+  If user data is made public, implement measures to anonymize the data, such as using pseudonyms.
+
+### 6. Notification System
+
+- Implement a notification system to alert users when their records are edited by someone else (e.g., via email or in-app notifications).
+
+### 7. Audit Log
+
+- Implement an audit log to track who added or modified records, helping with troubleshooting and maintaining data integrity.
+
+### 8. Testing
+
+- **Test Cases:**
+  Implement comprehensive test cases to ensure the app functions correctly, especially in scenarios involving multiple users adding or editing records simultaneously.
 
 ## Additional Features
 
